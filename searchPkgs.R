@@ -1,0 +1,3 @@
+getwd()
+
+help(pac=rmdshower)
