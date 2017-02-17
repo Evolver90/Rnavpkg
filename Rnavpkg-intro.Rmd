@@ -1,0 +1,46 @@
+---
+title: "Rnavpkg intro presentation"
+author: "John C Nash"
+date: February 17, 2017
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    ratio: 16x10
+---
+
+## Navigating the R package jungle
+
+   
+   
+  John C. Nash
+  
+  Telfer School of Management
+  
+  University of Ottawa
+
+  nashjc@uottawa.ca
+
+
+## Background
+
+Jungles -- rain forests -- are places rich in resources. 
+    
+    - more than 10000 packages in CRAN
+    - many vignettes and Blogs
+    - more stuff in Bioconductor, Github and other collections
+
+
+Resources are often difficult to find
+
+Forest is usually hard to navigate
+
+## Some responses to the challenge
+
+**Wrappers** -- packages that unify the call to a number of resources for a common set of tasks
+
+**Task Views** -- Guides to resources and how their development, timeliness and accessibility can be improved
+
+**Search** -- improving how users can find the tools they need and information on how to use them effectively and efficiently
+
+
