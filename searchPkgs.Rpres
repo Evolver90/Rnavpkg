@@ -1,0 +1,85 @@
+<style>
+.footer {
+    color: black;
+    background: #E6E6FAF;
+    position: fixed;
+    top: 90%;
+    text-align:center;
+    width:100%;
+}
+.small-code pre code {
+  font-size: 1em;
+}
+</style>
+
+Searching R Packages
+========================================================
+author: Spencer Graves [, John Nash, Julia Silge, and ... ???]
+date: `r format(Sys.time(), '%Y-%m-%d')`
+autosize: true
+
+How to find a package that ...?
+========================================================
+
+- Problem:  
+How to find what you want in the more than 10,000 packages now on CRAN and elsewhere? 
+
+- sos package<br>
+<tab>packageSum(findFn('your search term'))
+
+- Rdocumentation.org 
+
+- How to combine sos and Rdocumentation?  
+
+- What would you like?<br>
+Beggars can be choosers<br>
+with a modest sweat equity 
+
+<div class="footer" style="margin-top:-150px;font-size:80%;">
+This text is my footer text<br>
+Normally, the top of the text block would appear 90% of the way down the slide (i.e., at the bottom), because that is how the 'top' property is defined in the 'footer' style. However this particular footer wraps onto multiple lines, so we shift it up by specifying a negative value for the 'margin-top' property.</div>
+
+library(sos)
+========================================================
+```{r echo=FALSE}
+library(sos)
+```
+```{r findFn}
+findFn('your search term')
+```
+
+This opens a page in your default browser with the results of this search.  
+
+sos package search 
+========================================================
+- packageSum gives a summary by package 
+
+```{r yst2}
+yst <- findFn('your search term')
+invisible(PackageSum2(yst))
+```
+
+- BEFORE useR!2017, sg MUST IMPLMENT "packageSum", with a print method to send a table to the default browser.  
+- NOTE:  The print method for the "findFn" (or '"???"') search displays a table in your default web browser.  
+- This creates a table by package, not by help page.
+
+I'm confused
+========================================================
+Confused I am<br>
+
+
+Rdocumentation.org ========================================================
+
+Search all 12,412 CRAN, BioConductor and Github packages.
+
+Search Results for your search term<br> 
+Packages 11,670 results  ||  Functions 13,232 results
+
+
+delete this
+========================================================
+
+
+```{r, echo=FALSE}
+plot(cars)
+```
