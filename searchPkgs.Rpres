@@ -14,13 +14,12 @@
 
 Searching R Packages
 ========================================================
-author: Spencer Graves [, John Nash, Julia Silge, and ... ???]
+author: Spencer Graves [and ... ???]
 date: `r format(Sys.time(), '%Y-%m-%d')`
 autosize: true
 
 How to find a package that ...?
 ========================================================
-
 - Problem:  
 How to find what you want in the more than 10,000 packages now on CRAN and elsewhere? 
 
@@ -33,11 +32,7 @@ How to find what you want in the more than 10,000 packages now on CRAN and elsew
 
 - What would you like?<br>
 Beggars can be choosers<br>
-with a modest sweat equity 
-
-<div class="footer" style="margin-top:-150px;font-size:80%;">
-This text is my footer text<br>
-Normally, the top of the text block would appear 90% of the way down the slide (i.e., at the bottom), because that is how the 'top' property is defined in the 'footer' style. However this particular footer wraps onto multiple lines, so we shift it up by specifying a negative value for the 'margin-top' property.</div>
+with modest sweat equity 
 
 library(sos)
 ========================================================
@@ -50,6 +45,9 @@ findFn('your search term')
 
 This opens a page in your default browser with the results of this search.  
 
+[show search results in a browser]
+========================================================
+
 sos package search 
 ========================================================
 - packageSum gives a summary by package 
@@ -59,27 +57,51 @@ yst <- findFn('your search term')
 invisible(PackageSum2(yst))
 ```
 
-- BEFORE useR!2017, sg MUST IMPLMENT "packageSum", with a print method to send a table to the default browser.  
+- BEFORE useR!2017, Spencer Graves MUST IMPLMENT "packageSum", with a print method to send a table to the default browser, replace "PackageSum2" here with "packageSum" 
 - NOTE:  The print method for the "findFn" (or '"???"') search displays a table in your default web browser.  
-- This creates a table by package, not by help page.
+- This creates a table by package, not by help page.<br>
 
-I'm confused
+[show package search results in a browser]
 ========================================================
-Confused I am<br>
 
+Other sos features 
+========================================================
+Supports 
+- union | and intersection & of findFn objects<br>
+<br>
+- writeFindFn2xls creates an Excel file with sheets
+    + packageSum 
+    + findFn table 
+    + search strategy<br>
+<br>
+- Changing the sort order
+    + Default "sortby" = c('Count', 'MaxScore', 'TotalScore', 'Package', 'Score', 'Function') <br>
+<br>
 
-Rdocumentation.org ========================================================
-
+Rdocumentation.org
+========================================================
 Search all 12,412 CRAN, BioConductor and Github packages.
 
 Search Results for your search term<br> 
+<br>
 Packages 11,670 results  ||  Functions 13,232 results
 
-
-delete this
+Proposal to combine sos and Rdocumentation.org 
 ========================================================
+- A web interface like the current Rdocumentation.org 
+    + with a dropdown menu giving options for search criteria / sort order
+    + These would include options for either lexicographical or a weighted sum of different criteria (but need to keep it simple)<br> 
+<br>
+- Upgrade sos so it can optionally used the search criteria used by the web interface
+    
+<!-- put this in the last slide -- use jquery to append page # to all sections -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
 
-```{r, echo=FALSE}
-plot(cars)
-```
+for(i=0;i<$("section").length;i++) {
+if(i==0) continue
+$("section").eq(i).append("<p style='font-size:medium;position:fixed;right:10px;bottom:10px;'>" + i + "</p>")
+}
+
+</script>
