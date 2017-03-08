@@ -48,6 +48,9 @@ Stack Overflow
 
 Let's [check out the Task Views right now](https://cran.r-project.org/web/views/)
 
+Let's look at this [Shiny app](https://bearloga.shinyapps.io/taskviewr/) from [Mikhal Popov](https://www.mpopov.com/)
+
+
 ## The `ctv` package
 
 ```{r}
