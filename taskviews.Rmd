@@ -31,6 +31,10 @@ Stack Overflow
 
 <img src = "figure/counts-1.png" width="700">
 
+## { .fullpage }
+
+<img src = "figure/cran_doge.jpeg" width="700">
+
 # GOOD NEWS & BAD NEWS
 
 ## What this means for R users {.grid}
@@ -84,9 +88,7 @@ install.views("NaturalLanguageProcessing", coreOnly = TRUE)
 - [Editing a markdown file and using makefiles to get to XML](https://github.com/ropensci/webservices)
 - [Editing XML and using a pretty simple script to get to markdown](https://github.com/eddelbuettel/ctv-finance)
 
-## How do people find packages now?
-
-Show results from survey here
+# [How do people find packages now?](https://app.doopoll.co/poll/FGZqTL7vpaaCgpWCM/live-results)
 
 # Are you an R User?
 
