@@ -1,0 +1,16 @@
+---
+title: "Navigating the **R** package universe"
+author: "John C Nash"
+date: "May 11, 2017"
+output: html_document
+---
+
+There will be a special session Wed. July 5, from 17:00 - 18:30 in the main meeting room to 
+provide for discussion and hopefully team-building for the development of tools to improve
+the ability of users to quickly find and efficiently exploit the richness of the **R** package collections. Following brief presentations, we hope to gather in smaller groups to address
+such approaches as wrappers to unify package calls, improved task views and similar aids to
+guide package selection, and better search methods. Other ideas are welcome. Advance materials
+are available in the wiki at https://github.com/nashjc/Rnavpkg/wiki and in the "package" 
+https://github.com/nashjc/Rnavpkg. We welcome advance communications with interested use**R**s.
+
+John Nash (nashjc _at_ uottawa.ca), Julia Silge (julia.silge _at_ gmail.com), and Spencer Graves (spencer.graves _at_ prodsyse.com)
