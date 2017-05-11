@@ -27,8 +27,8 @@
 
     
   
-<section id="navigating-the-r-package-jungle" class="slide level2">
-<h2>Navigating the R package jungle</h2>
+<section id="navigating-the-r-package-universe" class="slide level2">
+<h2>Navigating the R package universe</h2>
 <p>John C. Nash</p>
 <p>Telfer School of Management</p>
 <p>University of Ottawa</p>
@@ -36,6 +36,7 @@
 </section>
 <section id="background" class="slide level2">
 <h2>Background</h2>
+<p>Initial name “Navigating the R package jungle”</p>
 <p>Jungles – rain forests – are places rich in resources.</p>
 <pre><code>- more than 10000 packages in CRAN
 - many vignettes and Blogs
@@ -45,9 +46,51 @@
 </section>
 <section id="some-responses-to-the-challenge" class="slide level2">
 <h2>Some responses to the challenge</h2>
-<p><strong>Wrappers</strong> – packages that unify the call to a number of resources for a common set of tasks</p>
-<p><strong>Task Views</strong> – Guides to resources and how their development, timeliness and accessibility can be improved</p>
-<p><strong>Search</strong> – improving how users can find the tools they need and information on how to use them effectively and efficiently</p>
+<p><strong>Wrappers</strong> – packages that <strong>unify</strong> the call to a number of resources for a common set of tasks (JN)</p>
+<p><strong>Task Views</strong> – <strong>Guidance</strong> on resources and how their development, timeliness and accessibility can be improved (JS)</p>
+<p><strong>Search</strong> – improving how users can find the tools they need and information on how to use them effectively and efficiently (SG)</p>
+</section>
+<section id="unifying-packages-1" class="slide level2">
+<h2>Unifying packages (1)</h2>
+<p>Best seen via an example: “optimization” (function minimization)</p>
+<ul>
+<li>optim(), nlm() and nlminb() in base <strong>R</strong></li>
+<li>quite large number of individual packages: BB, dfoptim, Rcgmin, Rvmmin, Rtnmin, lbfgs, lbfgs3, trust, trustOptim, nloptr, minqa, powell, and others</li>
+<li>MANY and DIFFERENT calling sequences</li>
+<li>MANY control parameters, some with same name but different function, others with simply different names for same functionality</li>
+</ul>
+</section>
+<section id="unifying-packages-2" class="slide level2">
+<h2>Unifying packages (2)</h2>
+<p>Response: package <strong>optimrx</strong> (successor to <strong>optimx</strong>) - function optimr() uses optim() calling sequence with more choices for “method=” - ongoing development - extra functions opm(), multistart(), polyopt()</p>
+</section>
+<section id="other-unification-efforts" class="slide level2">
+<h2>Other unification efforts</h2>
+<ul>
+<li><strong>gloptim</strong> (Hans Werner Borchers) global / stochastic optimization</li>
+<li><strong>jmv</strong> (Jamovi) (Jonathan Love) attempts to integrate many common statistical tests</li>
+<li><strong>bbmle</strong> (Ben Bolker) some integration of tools for maximum likelihood estimation</li>
+<li>Have I missed good examples? Let me know! (nashjc <em>at</em> uottawa.ca)</li>
+</ul>
+</section>
+<section id="opportunities-for-unification" class="slide level2">
+<h2>Opportunities for unification?</h2>
+<ul>
+<li>Principal Components / svd – (JN and Claudia Beleites) <a href="https://gitlab.com/nashjc/svdpls" class="uri">https://gitlab.com/nashjc/svdpls</a></li>
+<li>nonlinear modeling – better integration of nls(), packages <strong>nlsr</strong>, <strong>nls2</strong> and <strong>minpack.lm</strong>, though the gains may be small</li>
+<li>Are there opportunities to simplify or streamline the user experience with database access? With data manipulation and display (plyr, dplyr, tables, others?)</li>
+</ul>
+</section>
+<section id="opportunities-to-highlight-or-conceal-packages" class="slide level2">
+<h2>Opportunities to highlight or conceal packages</h2>
+<ul>
+<li>Do we need to see a list of all packages as a default?</li>
+<li>Lists by task or application?</li>
+<li>Lists by “popularity” of call</li>
+<li>Hide “infrastructure” packages from general users</li>
+<li>Omit some “junk” from the streamlined lists</li>
+</ul>
+<p>Note that such lists can be external to CRAN, i.e., wrappers.</p>
 </section>
 
   <!--
