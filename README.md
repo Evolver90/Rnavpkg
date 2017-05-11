@@ -13,4 +13,4 @@ The main wiki page includes links to the important material. See
 https://github.com/nashjc/Rnavpkg/wiki
 
 
-Organizers: John Nash, Julia Silge, and Spencer Graves
+Organizers: John Nash (nashjc _at_ uottawa.ca), Julia Silge (julia.silge _at_ gmail.com), and Spencer Graves (spencer.graves _at_ prodsyse.com)
