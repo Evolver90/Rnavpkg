@@ -93,7 +93,58 @@ Proposal to combine sos and Rdocumentation.org
     + These would include options for either lexicographical or a weighted sum of different criteria (but need to keep it simple)<br> 
 <br>
 - Upgrade sos so it can optionally used the search criteria used by the web interface
+ 
+CRANsearcher  
+========================================================
+
+RStudio add-in to search CRAN packages based on keyword(s)
     
+<div align="center">
+<img src="figure/cransearcher.png" width=900 height=580>
+</div>
+
+Shortcomings of existing tools
+========================================================
+- Web-based resources can distract away from RStudio and interrupt your workflow
+- Existing tools allow search of package names, but the description is rich with information
+- CRAN task views capture the highlights, but are not updated in real time
+
+*Solution:*
+- RStudio add-in tool for searching & exploring packages
+
+Installation & Use
+========================================================
+- Install from GitHub
+
+```{r}
+# devtools::install_github("RhoInc/CRANsearcher")
+```
+
+- Access from RStudio Addins drop-down
+
+- Functionality
+    + Search CRAN database based on keyword(s)
+        - Searches the package name, title, and **description**
+    + Filter by most recent release date
+    + Link to websites to learn more
+    + Install selected package(s) with the click of a button
+
+
+More information on CRANsearcher
+========================================================
+
+GitHub:
+https://github.com/RhoInc/CRANsearcher
+
+Authors:
+- Agustin Calatroni, Rho,Inc.
+- Becca Krouse, Rho, Inc.
+
+<div align="center">
+<img src="figure/cransearcher_hex.png" width=300 height=350>
+</div>
+
+
 <!-- put this in the last slide -- use jquery to append page # to all sections -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
