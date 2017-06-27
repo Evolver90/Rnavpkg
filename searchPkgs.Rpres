@@ -114,10 +114,10 @@ Shortcomings of existing tools
 
 Installation & Use
 ========================================================
-- Install from GitHub
+- Install from CRAN
 
 ```{r}
-# devtools::install_github("RhoInc/CRANsearcher")
+# install.packages("CRANsearcher")
 ```
 
 - Access from RStudio Addins drop-down
@@ -133,11 +133,14 @@ Installation & Use
 More information on CRANsearcher
 ========================================================
 
+CRAN:
+https://cran.r-project.org/web/packages/CRANsearcher
+
 GitHub:
 https://github.com/RhoInc/CRANsearcher
 
 Authors:
-- Agustin Calatroni, Rho,Inc.
+- Agustin Calatroni, Rho, Inc.
 - Becca Krouse, Rho, Inc.
 
 <div align="center">
