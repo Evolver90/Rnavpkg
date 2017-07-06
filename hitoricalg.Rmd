@@ -1,0 +1,52 @@
+---
+title: "histoRicalg -- Preserving and Transfering Algorithmic Knowledge"
+author: "John C Nash"
+date: July 6, 2017
+output:
+  pdf_document
+---
+
+John C. Nash
+  
+Telfer School of Management
+  
+University of Ottawa
+
+nashjc@uottawa.ca
+
+
+# 1-page summary
+
+Many (most?) of the algorithms making up the numerical building-blocks of scientific software today
+were developed and rendered into published code in the decade and a half between 1965 and 1980.
+Codes were mostly in Fortran, with some in Algol and BASIC. Slightly after this period, some 
+were published in Pascal. Today the proportion of workers in scientific and statistical 
+computation who are fluent with these
+computer languages is few, and the original authors are retired or deceased. 
+
+Unfortunately, there may be deficiencies in the codes. In my own fields of work as it applies 
+to the R Project for Statistical Computing, the provenance of the optim::L-BFGS-B and the 
+nlm functions are unclear, and nlm() has recently been shown by Maria Boehmer to be buggy.
+Even if there are no outright bugs, there may be incomplete code sections (i.e., features
+mentioned but not fully implemented) or there may be programming constructs that were used
+to exploit or work around particular hardware and operating system constraints. 
+
+Many older algorithms were left by the wayside as they were found to be non-performant or
+awkward to use as computer power became more readily available. However, new computing
+platforms, such as quantum computers, may be able to better use some of these discarded
+methods. 
+
+To avoid the potential loss of algorithmic knowledge, I have started to code some algorithms
+which I have used and/or developed into plain R code. R is suitably high level for describing
+algorithms clearly but succinctly in most cases. However, the features of Rmarkdown and the 
+knitr processor -- including its ability to have Fortran and other language chunks -- makes
+R a good vehicle for presenting and documenting old codes. 
+
+While some greybeards like myself can do much by reimplementing old algorithms, the process of
+reimplementing algorithms, documenting, checking and comparing their results would gain a lot
+more value if done in partnership with young workers. The latter would be exposed to the older
+programming languages as well as the algorithms, and personal interaction with people who were
+participants in work using those methods could amplify the knowledge transfer.
+
+The rest of this document adds some detail to the general proposal.
+
