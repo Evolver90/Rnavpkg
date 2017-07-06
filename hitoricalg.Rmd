@@ -7,6 +7,7 @@ author: "John C Nash,
 date: July 6, 2017
 output:
   pdf_document
+bibliography: historicalg.bib
 ---
 
 # 1-page summary
@@ -122,6 +123,8 @@ sections as follows:
 - pros and cons of the method, which could include performance issues if relevant
 - possibly commentary or assessments about the use of the method(s) in R, 
 particularly if there are deficiencies in existing R code or packages.
+- indexing of the methods and codes in various ways
 
 
 
+# References
