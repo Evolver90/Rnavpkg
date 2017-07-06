@@ -1,19 +1,13 @@
 ---
 title: "histoRicalg -- Preserving and Transfering Algorithmic Knowledge"
-author: "John C Nash"
+author: "John C Nash,
+    Telfer School of Management,
+    University of Ottawa,
+    nashjc@uottawa.ca"
 date: July 6, 2017
 output:
   pdf_document
 ---
-
-John C. Nash
-  
-Telfer School of Management
-  
-University of Ottawa
-
-nashjc@uottawa.ca
-
 
 # 1-page summary
 
@@ -22,9 +16,9 @@ were developed and rendered into published code in the decade and a half between
 Codes were mostly in Fortran, with some in Algol and BASIC. Slightly after this period, some 
 were published in Pascal. Today the proportion of workers in scientific and statistical 
 computation who are fluent with these
-computer languages is few, and the original authors are retired or deceased. 
+computer languages is small, and the original authors are retired or deceased. 
 
-Unfortunately, there may be deficiencies in the codes. In my own fields of work as it applies 
+Unfortunately, there may be deficiencies in the codes. In my own fields of work as they apply 
 to the R Project for Statistical Computing, the provenance of the optim::L-BFGS-B and the 
 nlm functions are unclear, and nlm() has recently been shown by Maria Boehmer to be buggy.
 Even if there are no outright bugs, there may be incomplete code sections (i.e., features
@@ -40,7 +34,8 @@ To avoid the potential loss of algorithmic knowledge, I have started to code som
 which I have used and/or developed into plain R code. R is suitably high level for describing
 algorithms clearly but succinctly in most cases. However, the features of Rmarkdown and the 
 knitr processor -- including its ability to have Fortran and other language chunks -- makes
-R a good vehicle for presenting and documenting old codes. 
+R a good vehicle for presenting and documenting old codes. Computational efficiency is not
+necessarily a goal. 
 
 While some greybeards like myself can do much by reimplementing old algorithms, the process of
 reimplementing algorithms, documenting, checking and comparing their results would gain a lot
@@ -73,7 +68,60 @@ would generate a number of suggestions.
 
 The second need is a way to link those who have at least some understanding -- even an
 awareness of a method and some bibliographic or computational source -- with younger
-workers, possibly even undergraduates. 
+workers, possibly even undergraduates. My experiences with working with students have
+been both positive and negative. The negative ones have been associated with the Google
+Summer of Code and similar activities, where the communication was always at a distance.
+I have found there needs to be a face-to-face interaction from time to time and especially
+when starting some effort. This applied not only to young workers, but it is, I think, 
+more critical with them, and exacerbated by cultural differences if they exist. Therefore,
+I believe it is important to find resources so that those involved in the histoRicalg 
+effort can meet and work together for a day or so at the beginning of an exercise. For
+a relatively extensive effort (multiple methods and codes), some update meeting every
+few months would be in order. 
+
+A third goal should be to report on the activity. Places like JSS or the R-Journal are
+an obvious choice, but sessions at conferences or independent workshops are a parallel
+vehicle. Again some resources will need to be found.
+
+# Resourcing
+
+The activities proposed here are a form of good housekeeping for software. Such activities
+are noticed most when absent. However, they should not be a major part of an enterprise
+such as R. I see a level of effort of 4-5 mature workers somewhat like myself and 8-12
+younger workers (most likely undergraduate, graduate and post-doc). I would envisage a
+stipend equivalent to 3-months pay at a level much like Google Summer of Code (base $6000).
+Travel and accommodation becomes expensive over distances, so it may be helpful to 
+try to cluster younger and older participants geographically. I do not envisage any pay
+for the mature workers. Most of us are likely retired. However, for that very reason, 
+their participation should not impose out-of-pocket costs or inconvenience.
+
+A caveat to the "work for free" proposition is that requests by organizations within the
+R family for specific help should be paid at reasonable rates, including to the junior
+members. For example, work on older algorithms may reveal an opportunity for some useful
+code requiring packaging or documentation or standardization beyond the goals of histoRicalg.
+
+I will eschew providing a specific total for resources for the project at this time, as I
+believe it certain there will be discussion and adjustment of the ideas before a specific
+formal proposal is finalized. I welcome commentary and exchange of views.
+
+# Outputs
+
+To date, I have prinarily encapsulated my experiences with older codes as an Rmarkdown or
+enriched LaTEX (LaTEX with R or other code chunks) vignettes that are rendered to standard
+pdf documents but which in source form contain the codes we have investigated and tests
+run. These have been rather informal to date, but I believe they could be improved by including
+sections as follows:
+
+- description of the problems solved
+- some background (provenance) of existing codes
+- if possible, existing code and example runs
+- R implementation(s)
+- documentation of the R code
+- examples
+- if possible, tests and comparisons
+- pros and cons of the method, which could include performance issues if relevant
+- possibly commentary or assessments about the use of the method(s) in R, 
+particularly if there are deficiencies in existing R code or packages.
 
 
 
