@@ -50,3 +50,30 @@ participants in work using those methods could amplify the knowledge transfer.
 
 The rest of this document adds some detail to the general proposal.
 
+# Existing infrastructure for "old" algorithms
+
+The following initiatives are a partial list (I welcome suggestions of others) of resources 
+related to numerical methods infrastructure in R:
+
+- package lbfgsb3: the 2011 Fortran code for L-BFGS-B (??Nocedal ref??)
+- RQmin: a vignette about Rayleigh Quotient minimization (JN??)
+- snewton: a developmental package for a safeguarded Newton method (JN??)
+- pracma: a collection of numerical methods (Hans Werner Borchers??)
+- geradin: an implementation of a special Rayleigh Quotient minimizer (JN?)
+- Nash-Beleites and others: a vignette about various packages in R for PLS and svd (??ref)
+- jacobi: Bill Venables work on the Jacobi eigenvalue algorithm and its derivatives
+
+
+# A possible process
+
+The first need is to identify algorithms or families of algorithms for which better
+and documented understanding is worthwhile.  I believe that some advertising of an 
+effort such as that documented here to the community, and particularly mature workers,
+would generate a number of suggestions.
+
+The second need is a way to link those who have at least some understanding -- even an
+awareness of a method and some bibliographic or computational source -- with younger
+workers, possibly even undergraduates. 
+
+
+
