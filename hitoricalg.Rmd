@@ -64,12 +64,13 @@ related to numerical methods infrastructure in, or related to, R:
 - snewton: a developmental package for a safeguarded Newton method (@Nash-snewton)
 - pracma: a collection of numerical methods (@Borchers-pracma)
 - geradin: an implementation of a special Rayleigh Quotient minimizer (JN?)
-- Nash-Beleites and others: a vignette about various packages in R for PLS and svd
-(\url{https://gitlab.com/nashjc/svdpls})
+- Nash-Beleites and others: a vignette about various packages in R for PLS and singular
+value decomposition computations (\url{https://gitlab.com/nashjc/svdpls})
 - jacobi: Bill Venables recently approached me about the original Jacobi eigenvalue method
 (\url{https://cran.r-project.org/web/packages/JacobiEigen/vignettes/JacobiEigen.pdf}),
 derived from the 19th century paper @Jacobi1846
-- several PORT library (??ref)
+- several PORT library (@Fox-PORT1978) routines are used in R, notably in nlminb() for bound 
+constrained function minimization and nonlinear least squares (in nls())
 
 
 # A possible process
