@@ -34,14 +34,16 @@ to exploit or work around particular hardware and operating system constraints.
 Many older algorithms were left by the wayside as they were found to be non-performant or
 awkward to use as computer power became more readily available. However, new computing
 platforms, such as quantum computers, may be able to better use some of these discarded
-methods. 
+methods via particularly efficient inner products, though at the time of writing these
+inner products are only at the bit level.
 
 To avoid the potential loss of algorithmic knowledge, I have started to code some algorithms
 which I have used and/or developed into plain R code. R is suitably high level for describing
 algorithms clearly but succinctly in most cases. However, the features of Rmarkdown and the 
 knitr processor -- including its ability to have Fortran and other language chunks -- makes
 R a good vehicle for presenting and documenting old codes. Computational efficiency is not
-necessarily a goal. 
+necessarily a goal, but we do want to learn or verify characteristics of particular algorithms,
+which includes their workload.
 
 While some greybeards like myself can do much by reimplementing old algorithms, the process of
 reimplementing algorithms, documenting, checking and comparing their results would gain a lot
@@ -54,15 +56,20 @@ The rest of this document adds some detail to the general proposal.
 # Existing infrastructure for "old" algorithms
 
 The following initiatives are a partial list (I welcome suggestions of others) of resources 
-related to numerical methods infrastructure in R:
+related to numerical methods infrastructure in, or related to, R:
 
 - package lbfgsb3: the 2011 Fortran code for L-BFGS-B (@Morales:2011)
-- RQmin: a vignette about Rayleigh Quotient minimization (JN??)
-- snewton: a developmental package for a safeguarded Newton method (JN??)
-- pracma: a collection of numerical methods (Hans Werner Borchers??)
+- RQmin: a vignette about Rayleigh Quotient minimization
+ (\url{https://r-forge.r-project.org/scm/viewvc.php/RQdoc/RQtimes.pdf?root=optimizer&view=log})
+- snewton: a developmental package for a safeguarded Newton method (@Nash-snewton)
+- pracma: a collection of numerical methods (@Borchers-pracma)
 - geradin: an implementation of a special Rayleigh Quotient minimizer (JN?)
-- Nash-Beleites and others: a vignette about various packages in R for PLS and svd (??ref)
-- jacobi: Bill Venables work on the Jacobi eigenvalue algorithm and its derivatives
+- Nash-Beleites and others: a vignette about various packages in R for PLS and svd
+(\url{https://gitlab.com/nashjc/svdpls})
+- jacobi: Bill Venables recently approached me about the original Jacobi eigenvalue method
+(\url{https://cran.r-project.org/web/packages/JacobiEigen/vignettes/JacobiEigen.pdf}),
+derived from the 19th century paper @Jacobi1846
+- several PORT library (??ref)
 
 
 # A possible process
@@ -131,5 +138,9 @@ particularly if there are deficiencies in existing R code or packages.
 - indexing of the methods and codes in various ways
 
 # Deciding on methods
+
+- what does R already use in base
+- what does R already use or offer in packages
+- other codes
 
 # References
