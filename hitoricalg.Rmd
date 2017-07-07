@@ -130,6 +130,6 @@ sections as follows:
 particularly if there are deficiencies in existing R code or packages.
 - indexing of the methods and codes in various ways
 
-
+# Deciding on methods
 
 # References
