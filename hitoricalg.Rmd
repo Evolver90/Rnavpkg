@@ -56,7 +56,7 @@ The rest of this document adds some detail to the general proposal.
 The following initiatives are a partial list (I welcome suggestions of others) of resources 
 related to numerical methods infrastructure in R:
 
-- package lbfgsb3: the 2011 Fortran code for L-BFGS-B (??Nocedal ref??)
+- package lbfgsb3: the 2011 Fortran code for L-BFGS-B (@Morales:2011)
 - RQmin: a vignette about Rayleigh Quotient minimization (JN??)
 - snewton: a developmental package for a safeguarded Newton method (JN??)
 - pracma: a collection of numerical methods (Hans Werner Borchers??)
