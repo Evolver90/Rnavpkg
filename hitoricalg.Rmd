@@ -14,12 +14,17 @@ bibliography: historicalg.bib
 
 Many (most?) of the algorithms making up the numerical building-blocks of scientific software today
 were developed and rendered into published code in the decade and a half between 1965 and 1980.
-Codes were mostly in Fortran, with some in Algol and BASIC. Slightly after this period, some 
+Codes were mostly in Fortran, with some in Algol and BASIC. 
+Slightly after this period, some 
 were published in Pascal. Today the proportion of workers in scientific and statistical 
 computation who are fluent with these
-computer languages is small, and the original authors are retired or deceased. 
+computer languages is small, and the original authors are retired or deceased. Some of the
+algorithms and the codes implementing them were historic in having a large impact on computing
+while others remain historical in simply being of their time. However, it may be important in
+the future to understand and be able to use these ideas.
 
-Unfortunately, there may be deficiencies in the codes. In my own fields of work as they apply 
+Unfortunately, there may be deficiencies in the codes, some of which are still in use. 
+In my own fields of work as they apply 
 to the R Project for Statistical Computing, the provenance of the optim::L-BFGS-B and the 
 nlm functions are unclear, and nlm() has recently been shown by Maria Boehmer to be buggy.
 Even if there are no outright bugs, there may be incomplete code sections (i.e., features
