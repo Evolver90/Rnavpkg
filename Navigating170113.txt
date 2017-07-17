@@ -1,0 +1,31 @@
+Navigating the Jungle of R Packages
+
+The R ecosystem has many packages in various collections, 
+especially CRAN, Bioconductor, and GitHub. While this 
+richness of choice speaks to the popularity and
+importance of R, the large number of contributed packages 
+makes it difficult for users to find appropriate tools for
+their work.
+
+A session on this subject has been approved for UseR! in 
+Brussels. The tentative structure is three short 
+introductory presentations, followed by discussion or 
+planning work to improve the tools available to help 
+users find the best R package and function for their needs. 
+
+The currently proposed topics are
+
+- wrapper packages that allow diverse tools that perform 
+  similar functions to be accessed by unified calls
+
+- collaborative mechanisms to create and update Task Views
+
+- search and sort tools to find packages.
+
+At the time of writing we have tentative presenters for 
+the topics, but welcome others. We hope these presentations 
+at useR! 2017 will be part of a larger discussion that will 
+contribute to an increased team effort after the conference 
+to improve the the support for R users in these areas. 
+
+
