@@ -18,7 +18,7 @@ There are more than [10,000 packages on CRAN](https://juliasilge.com/blog/scrapi
 
 ## Unification
 
-John has been interested in working on wrappers, packages that call other, related packages for a common set of tasks. With a unified wrapper package, a user only has to learn one API but then can use many different implementations for a certain task. John has been particularly involved in numerical optimization techniques and presented possibilities there and beyond.
+John has been interested in working on wrappers, packages that call other, related packages for a common set of tasks. With a unified wrapper package, a user only has to learn one API but then can use many different implementations for a certain task. John has been particularly involved in [numerical optimization techniques](https://nashjc.wordpress.com/2016/11/20/choosing-which-method-to-use-for-optimizating-functions/) and presented possibilities there and beyond.
 
 ## Guidance
 
