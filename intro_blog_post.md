@@ -20,6 +20,13 @@ There are more than [10,000 packages on CRAN](https://juliasilge.com/blog/scrapi
 
 John has been interested in working on wrappers, packages that call other, related packages for a common set of tasks. With a unified wrapper package, a user only has to learn one API but then can use many different implementations for a certain task. John has been particularly involved in [numerical optimization techniques](https://nashjc.wordpress.com/2016/11/20/choosing-which-method-to-use-for-optimizating-functions/) and presented possibilities there and beyond.
 
+More generally, and as the session revealed in the breakout discussion, there are opportunities to merge either packages
+or their functionality. The key issues require, however, human cooperation and some give and take in a realm where egos
+can take precedence over the efficiency of the R ecosystem.
+
+There were also suggestions that can be interpreted as the unification of the presentation of packages. Overlapping
+with the "guidance" and "search" themes, these ideas seek to provide selective presentations of packages.
+
 ## Guidance
 
 Julia explored resources that exist to guide users to packages for certains tasks. R users can turn to long-established resources like [CRAN Task Views](https://cran.r-project.org/web/views/), or newer options under current development such as the [packagemetrics](https://ropensci.org/blog/blog/2017/06/27/packagemetrics) package or the [CRANsearcher](https://github.com/RhoInc/CRANsearcher) RStudio add-in. Julia [organized a survey](https://app.doopoll.co/poll/FGZqTL7vpaaCgpWCM/live-results) before useR about how R users learn about R packages that informed our discussion.
