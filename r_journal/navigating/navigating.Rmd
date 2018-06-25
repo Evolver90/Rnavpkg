@@ -1,25 +1,28 @@
 ---
 title: Navigating the R Package Universe
 author:
-  - name: Spencer Graves
-    affiliation: EffectiveDefense.org
-    address:
-    - line 1
-    - line 2
-    email:  spencer.graves@effectivedefense.org
-  - name: John C. Nash
-    affiliation: University of Ottawa
-    address:
-    - Telfer School of Management
-    - Ottawa, ON K1N 6N5, Canada
-    email:  nashjc@uottawa.ca
   - name: Julia Silge
     affiliation: Stack Overflow
     address:
     - 110 William Street, Floor 28
     - New York City, NY 10038
     email:  julia.silge@gmail.com
-abstract: >
+  - name: John C. Nash
+    affiliation: University of Ottawa
+    address:
+    - Telfer School of Management
+    - Ottawa, ON K1N 6N5, Canada
+    email:  nashjc@uottawa.ca
+  - name: Spencer Graves
+    affiliation: EffectiveDefense.org
+    address:
+    - 4550 Warwick Blvd. Apt. 508 
+    - Kansas City, MO 64111 
+    email:  spencer.graves@effectivedefense.org
+abstract: 
+
+
+>
   An abstract of less than 150 words.
 preamble: >
   % Any extra latex you need in the preamble
@@ -39,20 +42,22 @@ theme_set(theme_minimal())
 
 ## Introduction
 
-As of our writing, there are more than 12,000 packages on CRAN. R users must approach this abundance of packages with effective strategies to find what they need and choose which packages to invest time in learning how to use. At useR!2017 in Brussels, we organized a contributed session centered on this issue, with three themes in our discussion. The three themes we focused on are **search**, **guidance**, and **unification**. Here, we summarize these important themes, the discussion in our community both at useR!2017 and in the intervening months, and where we can go from here.
+As of our writing, there are more than 12,000 packages on CRAN. R users must approach this abundance of packages with effective strategies to find what they need and choose which packages to invest time in learning how to use. At useR!2017 in Brussels, we organized a plenary session on this issue, with three themes: **search**, **guidance**, and **unification**. Here, we summarize these important themes, the discussion in our community both at useR!2017 and in the intervening months, and where we can go from here.
 
 Users need options to search R packages, perhaps the content of DESCRIPTION files, documentation files, or other components of R packages. One author (Graves) has worked on the issue of searching for R functions from within R itself in the sos package \citep{sos}, and other options have been built such as RDocumentation.org \citep{rdocumentation}.
 
 Guidance about what package to use for any given task is available from multiple resources for users. R users can turn to long-established resources like CRAN Task Views (reference?), or newer options under current development such as the packagemetrics package \citep{packagemetrics} or the CRANsearcher RStudio addin \citep{cransearcher}. One author (Silge) organized a survey before useR about how R users learn about R packages that informed our discussion and is summarized here.
 
-By unification, we largely mean meta-packages or wrappers, packages that call other, related packages for a common set of tasks. With a unified wrapper package, a user only has to learn one API but then can use many different implementations for a certain task. One author (Nash) has been particularly involved in numerical optimization techniques and presented possibilities there and beyond. More generally, as revealed during breakout discussions at useR!2017 and beyond, there are opportunities to merge either packages or their functionality. Such ideas require human cooperation and some give and take in a realm where egos can take precedence over the efficiency of the R ecosystem.
+By unification, we largely mean meta-packages or wrappers, packages that call other, related packages for a common set of tasks. With a unified wrapper package, a user only has to learn one API but then can use many different implementations for a certain task. One author (Nash) has been particularly involved in numerical optimization techniques and presented possibilities there and beyond. More generally, as revealed during breakout discussions at useR!2017 and beyond, there are opportunities to merge either packages or their functionality. Such ideas require human cooperation and some give and take in a realm where egos can take precedence over ease of use.
 
-After our main presentation at useR!2017, we broke out into three smaller sessions focused on these three themes. We are encouraged by the engaged attendance and vigorous participation from the community we experienced, and hope to use our community's enthusiasm and ideas to move forward with steps that will improve parts of the R ecosystem. 
+After our main presentation at useR!2017, we broke out into three smaller sessions focused on these three themes. We are encouraged by the engaged attendance and vigorous participation from the community we experienced, and hope to use our community's enthusiasm and ideas to move forward with steps that will improve the value of the R ecosystem to humanity.  
 
 
 You can include references in parentheses \citep{R}, or cite a reference such as \citet{R} in the text.
 
 ## Search
+
+
 
 ## Guidance
 
