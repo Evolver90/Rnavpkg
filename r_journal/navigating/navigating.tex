@@ -1,21 +1,29 @@
 % !TeX root = RJwrapper.tex
 \title{Navigating the R Package Universe}
-\author{by Spencer Graves, John C. Nash, Julia Silge}
+\author{by Julia Silge, John C. Nash, Spencer Graves}
 
 \maketitle
 
 \abstract{%
-An abstract of less than 150 words.
+This article is an outgrowth of a plenary session on ``Navigating the R
+Package Universe'' at the useR!2017 conference in Brussels. This session
+considered three different ways to make it easier for people to use R:
+Making it easier for people to find what they want in the universe of
+contributed packages using (1) various search capabilities, (2)
+commentary, e.g., with CRAN Task Views, and (3) producing common
+interfaces to make it easier for users to compare alternative approaches
+to essentially the same problem.\\
 }
 
-\subsection{Introduction}\label{introduction}
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
 
 As of our writing, there are more than 12,000 packages on CRAN. R users
 must approach this abundance of packages with effective strategies to
 find what they need and choose which packages to invest time in learning
-how to use. At useR!2017 in Brussels, we organized a contributed session
-centered on this issue, with three themes in our discussion. The three
-themes we focused on are \textbf{search}, \textbf{guidance}, and
+how to use. At useR!2017 in Brussels, we organized a plenary session on
+this issue, with three themes: \textbf{search}, \textbf{guidance}, and
 \textbf{unification}. Here, we summarize these important themes, the
 discussion in our community both at useR!2017 and in the intervening
 months, and where we can go from here.
@@ -45,20 +53,35 @@ possibilities there and beyond. More generally, as revealed during
 breakout discussions at useR!2017 and beyond, there are opportunities to
 merge either packages or their functionality. Such ideas require human
 cooperation and some give and take in a realm where egos can take
-precedence over the efficiency of the R ecosystem.
+precedence over ease of use.
 
 After our main presentation at useR!2017, we broke out into three
 smaller sessions focused on these three themes. We are encouraged by the
 engaged attendance and vigorous participation from the community we
 experienced, and hope to use our community's enthusiasm and ideas to
-move forward with steps that will improve parts of the R ecosystem.
+move forward with steps that will improve the value of the R ecosystem
+to humanity.
 
 You can include references in parentheses \citep{R}, or cite a reference
 such as \citet{R} in the text.
 
-\subsection{Search}\label{search}
+\hypertarget{search}{%
+\subsection{Search}\label{search}}
 
-\subsection{Guidance}\label{guidance}
+There are a number of different search capabilities for R, summarized in
+the following table. This table is an extract from a similar table in
+the Wikiversity artice on
+\href{https://en.wikiversity.org/wiki/Searching_R_Packages}{``Searching
+R Packages''}. If you think this analysis could be improved in any way,
+you are invited to make whatever changes you want to that Wikiversity
+article. Of course, any change you make could be later changed by
+someone else. Wikiversity, like Wikipedia, works, because the Wikimedia
+culture pushes people to write from a neutral point of view citing
+credible sources and treat others with respect, settling difference
+through discussions on the associated ``Discuss'' or ``Talk'' page.
+
+\hypertarget{guidance}{%
+\subsection{Guidance}\label{guidance}}
 
 In preparation for this session, one author (Silge) ran a brief online
 survey in the spring of 2017 to ask R users how they currently discover
@@ -122,7 +145,9 @@ session focused on guidance for package choice and package evaluation,
 we had about 40 participants in our discussion. It was a fruitful
 discussion and several important themes emerged.
 
-\subsubsection{Value of personal impact}\label{value-of-personal-impact}
+\hypertarget{value-of-personal-impact}{%
+\subsubsection{Value of personal
+impact}\label{value-of-personal-impact}}
 
 Participants in this session emphasized how impactful personal
 relationships can be in how packages are shared and evaluated. Some
@@ -137,7 +162,8 @@ live data analysis, such as those by
 Taylor} and
 \href{https://twitter.com/rdpeng/status/872090694390861824}{Roger Peng}.
 
-\subsubsection{CRAN Task Views}\label{cran-task-views}
+\hypertarget{cran-task-views}{%
+\subsubsection{CRAN Task Views}\label{cran-task-views}}
 
 Some participants wondered whether the idea of a
 \href{https://cran.r-project.org/web/views/}{CRAN Task View} is outdated
@@ -160,8 +186,9 @@ These are helpful for \emph{all} R users, of course, but also for
 maintainers of CRAN Task Views. The pkgdown \citep{pkgdown} package was
 mentioned as a great way to make documentation visible.
 
+\hypertarget{cran-and-you}{%
 \subsubsection{\texorpdfstring{CRAN and
-\emph{you}}{CRAN and you}}\label{cran-and-you}
+\emph{you}}{CRAN and you}}\label{cran-and-you}}
 
 Participants had several ideas about how things are done on CRAN now and
 adjustments that might be made in the interest of discovering and
@@ -185,7 +212,8 @@ some discussion about whether the very minimal gate-keeping on CRAN was
 good or bad for the community, although the general feeling was that
 efforts to keep packages off CRAN would not be positive.
 
-\subsubsection{More data, more problems}\label{more-data-more-problems}
+\hypertarget{more-data-more-problems}{%
+\subsubsection{More data, more problems}\label{more-data-more-problems}}
 
 Some of the package developers at the session wondered why, when R is a
 data-centric language, developers have such primitive analytics about
@@ -203,9 +231,51 @@ that would suggest packages and good practice. Such a linter would
 necessarily be opinionated, but almost all of the efforts to suggest and
 evaluate R packages are at some level.
 
-\subsection{Unification}\label{unification}
+\hypertarget{unification}{%
+\subsection{Unification}\label{unification}}
 
-\subsection{Summary}\label{summary}
+\textbf{Unification}, as we have described it above, attempts to reduce
+the package count and the span of knowledge required of users. When
+there are many ways to carry out the same calculation, there are
+inevitable differences of approach. However, in many respects it is the
+\textbf{similarity} of approaches that causes most confusion. Very
+similar calling sequences, unless they are entirely compatible, lead to
+nasty experiences for users, and threaten the validity of results.
+
+From the experience of one of us (JN), the most satisfactory form of
+unification from the point of view of users is the use of wrapper
+functions that consolidate a number of similar tools into a single
+calling sequence. This has been the goal of package \textbf{optimx},
+which in its 2018 incarnation consolidates a number of R-internal and
+package-based function minimization tools. Moreover, the present version
+subsumes a number of other packages, thereby offering a reduction in the
+package count.
+
+The downside of this is the amount of work for the developer. Worse, the
+very large package count has led to many \textbf{reverse dependencies}.
+At the time of writing, the new \texttt{optimx} fails checks of reverse
+dependencies, though apparently NOT because of anything new in the
+package. The issues seem to relate to general tightening-up of checks
+for CRAN (Consolidated R Archive Network) policies, so that the
+dependent packages fail (or are not installable) \textbf{before} they
+even try functionality from \texttt{optimx}. Such issues will have to be
+resolved.
+
+While a wrapper such as \texttt{optimx} can, with effort, be created,
+merging two existing but different packages that provide similar
+capability with very different user interfaces requires human
+cooperation. At this time, and despite the very collaborative R
+community, the level of effort to do such work is daunting. Moreover,
+there is a general lack of financial or other reward for such efforts.
+
+During discussions at UseR!2017, it was clear that useRs are quite
+interested in unification of package. Younger workers expressed the
+opinion that there were egos and interest groups standing in the way of
+some such unifications, but the status of some of the players impeded
+the discussion of such possibilities.
+
+\hypertarget{summary}{%
+\subsection{Summary}\label{summary}}
 
 Our work on these topics leads us to call for increased respect and
 value for the work done by local meetup group organizers and individuals
@@ -223,21 +293,9 @@ new R user.
 JOHN AND SPENCER: For full details of \emph{The R Journal} style and
 information on how to prepare your article for submission, see the
 \href{https://journal.r-project.org/share/author-guide.pdf}{Instructions
-for Authors}. \bibliography{RJreferences}
+for Authors}.
 
-\address{%
-Spencer Graves\\
-EffectiveDefense.org\\
-line 1\\ line 2\\
-}
-\href{mailto:spencer.graves@effectivedefense.org}{\nolinkurl{spencer.graves@effectivedefense.org}}
-
-\address{%
-John C. Nash\\
-University of Ottawa\\
-line 1\\ line 2\\
-}
-\href{mailto:nashjc@uottawa.ca}{\nolinkurl{nashjc@uottawa.ca}}
+\bibliography{RJreferences}
 
 \address{%
 Julia Silge\\
@@ -245,4 +303,18 @@ Stack Overflow\\
 110 William Street, Floor 28\\ New York City, NY 10038\\
 }
 \href{mailto:julia.silge@gmail.com}{\nolinkurl{julia.silge@gmail.com}}
+
+\address{%
+John C. Nash\\
+University of Ottawa\\
+Telfer School of Management\\ Ottawa, ON K1N 6N5, Canada\\
+}
+\href{mailto:nashjc@uottawa.ca}{\nolinkurl{nashjc@uottawa.ca}}
+
+\address{%
+Spencer Graves\\
+EffectiveDefense.org\\
+4550 Warwick Blvd. Apt. 508\\ Kansas City, MO 64111\\
+}
+\href{mailto:spencer.graves@effectivedefense.org}{\nolinkurl{spencer.graves@effectivedefense.org}}
 

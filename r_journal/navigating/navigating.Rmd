@@ -20,11 +20,8 @@ author:
     - Kansas City, MO 64111 
     email:  spencer.graves@effectivedefense.org
 
-## abstract: >
-
-This article is an outgrowth of a plenary session on "Navigating the R Package Universe" at the useR!2017 conference in Brussels.  This session considered three different ways to make it easier for people to use R:  Making it easier for people to find what they want in the universe of contributed packages using (1) various search capabilities, (2) commentary, e.g., with CRAN Task Views, and (3) producing common interfaces to make it easier for users to compare alternative approaches to essentially the same problem.  
-
-  %  An abstract of less than 150 words.
+abstract: >
+  Today, the enormous number of contributed packages available to R users outstrips any given user's ability to understand how these packages work, their relative merits, or how they are related to each other. We organized a plenary session at useR!2017 in Brussels for the R community to think through these issues and ways forward. This session considered three key points of discussion. Users can navigate the universe of R packages with (1) capabilities for directly searching for R packages, (2) guidance for which packages to use, e.g., from CRAN Task Views and other sources, and (3) access to common interfaces for alternative approaches to essentially the same problem.  
 
 preamble: >
   % Any extra latex you need in the preamble
@@ -113,34 +110,34 @@ Participants in this session emphasized how impactful personal relationships can
 
 ### CRAN Task Views
 
-Some participants wondered whether the idea of a [CRAN Task View](https://cran.r-project.org/web/views/) is outdated in the current climate with so many packages, and whether it is even possible for one person to maintain one effectively. Others responded that CTVs are all about curation, which is still important, perhaps even more important now. We had at least one CTV maintainer present in our breakout session, and several things were presented as important in order for CTV maintainers to do their jobs:
+Some participants wondered whether the idea of a [CRAN Task View](https://cran.r-project.org/web/views/) is outdated in the current climate with so many packages, and whether it is even possible for one person to maintain one effectively. Others responded that CTVs are focused on curation, which is still important, perhaps even more so now. We had at least one CTV maintainer present in our breakout session, and several things were presented as important in order for CTV maintainers to do their jobs:
 
 - Package maintainers should update their `NEWS` files.
 - Package maintainers need to write good documentation.
 
-These are helpful for *all* R users, of course, but also for maintainers of CRAN Task Views. The pkgdown \citep{pkgdown} package was mentioned as a great way to make documentation visible.
+These are helpful for *all* R users, of course, but also for maintainers of CRAN Task Views. The pkgdown \citep{pkgdown} package was mentioned as an effective option to make documentation visible.
 
 ### CRAN and *you*
 
 Participants had several ideas about how things are done on CRAN now and adjustments that might be made in the interest of discovering and evaluating packages. One idea that came up several times was the possibility of keywords or tagging for packages. Since useR!2017, the authors have learned that there is support for some tagging architecture for packages on CRAN in the [DESCRIPTION file using ACM, JEL, or MSC classifications](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file). For an example of this in action, check out the lfe \citep{lfe} package. These are fairly unwieldy lists currently and something like an RStudio addin could be used to navigate them, if they were widely used.
 
-Another desire participants voiced was for more information directly on CRAN, such as the number of downloads for packages. Participants also suggested that vignettes for context-specific tasks like the [Bioconductor Workflows](https://www.bioconductor.org/help/workflows/) would be helpful for package discovery and evaluation, either associated with CRAN or perhaps the *R Journal*. Finally, there was some discussion about whether the very minimal gate-keeping on CRAN was good or bad for the community, although the general feeling was that efforts to keep packages off CRAN would not be positive.
+Another desire participants voiced was for more information directly on CRAN, such as the number of downloads for packages. Participants also suggested that vignettes for context-specific tasks like the [Bioconductor Workflows](https://www.bioconductor.org/help/workflows/) would be helpful for package discovery and evaluation, either associated with CRAN or perhaps the *R Journal*. Finally, there was some discussion about whether the very minimal gate-keeping on CRAN was good or bad for the community, although the conclusion was that editorial efforts to keep packages off CRAN would not be positive.
 
 ### More data, more problems
 
-Some of the package developers at the session wondered why, when R is a data-centric language, developers have such primitive analytics about their users. Issues of user privacy are central here, but there might be opt-in options that could help both package developers and users make better decisions. The idea of a recommender system for R packages was brought up multiple times, perhaps a Tinder for R packages like [papr, the Tinder for academic preprints](https://simplystatistics.org/2016/10/03/papr/). Both the users and developers present thought that data on package use (instead of package downloads alone) would be helpful in evaluating how important or helpful R packages are. Participants also discussed the possibility of a linter for analysis scripts, similar in concept to linters for code (such as \citet{lintr}), that would suggest packages and good practice. Such a linter would necessarily be opinionated, but almost all of the efforts to suggest and evaluate R packages are at some level.
+Some of the package developers at the session wondered why, when R is a data-centric language, developers have such primitive analytics about their users. Issues of user privacy are central here, but there might be opt-in options that could help both package developers and users make better decisions. The idea of a recommender system for R packages was brought up multiple times, perhaps a Tinder for R packages like [papr, the Tinder for academic preprints](https://simplystatistics.org/2016/10/03/papr/). Both the users and developers present thought that data on package use (instead of package downloads alone) would be helpful in evaluating how important or helpful R packages are. Participants also discussed the possibility of a linter for analysis scripts, similar in concept to linters for code (such as \citet{lintr}), that would suggest packages and good practice. Such a linter would necessarily be opinionated, but almost all efforts to suggest and evaluate R packages are, by definition.
 
 ## Unification
 
-**Unification**, as we have described it above, attempts to reduce the package count and the span of knowledge required of users. When there are many ways to carry out the same calculation, there are inevitable differences of approach. However, in many respects it is the **similarity** of approaches that causes most confusion. Very similar calling sequences, unless they are entirely compatible, lead to nasty experiences for users, and threaten the validity of results.
+**Unification**, as we have describe it here, attempts to reduce the package count and the span of knowledge required of users. When there are many ways to carry out the same calculation, there are inevitable differences of approach. However, in many respects it is the **similarity** of approaches that causes most confusion. Very similar calling sequences, unless they are entirely compatible, lead to nasty experiences for users, and threaten the validity of results.
 
-From the experience of one of us (JN), the most satisfactory form of unification from the point of view of users is the use of wrapper functions that consolidate a number of similar tools into a single calling sequence. This has been the goal of package **optimx**, which in its 2018 incarnation consolidates a number of R-internal and package-based function minimization tools. Moreover, the present version subsumes a number of other packages, thereby offering a reduction in the package count.
+From the experience of one author (JN), the most satisfactory form of unification from the point of view of users is the use of wrapper functions that consolidate a number of similar tools into a single calling sequence. This has been the goal of the package **optimx**, which in its 2018 incarnation consolidates a number of R-internal and package-based function minimization tools. Moreover, the present version subsumes a number of other packages, thereby offering a reduction in the effective package count.
 
-The downside of this is the amount of work for the developer. Worse, the very large package count has led to many **reverse dependencies**. At the time of writing, the new `optimx` fails checks of reverse dependencies, though apparently NOT because of anything new in the package. The issues seem to relate to general tightening-up of checks for CRAN (Consolidated R Archive Network) policies, so that the dependent packages fail (or are not installable) **before** they even try functionality from `optimx`. Such issues will have to be resolved.
+The downside of this is the amount of work for the developer. Worse, the very large package count has led to many **reverse dependencies**. At the time of writing, the new `optimx` fails checks of reverse dependencies, though apparently not because of anything new in the package. The issues seem to relate to general tightening-up of checks for CRAN policies, so that the dependent packages fail (or are not installable) **before** they even try functionality from `optimx`. Such issues will have to be resolved.
 
 While a wrapper such as `optimx` can, with effort, be created, merging two existing but different packages that provide similar capability with very different user interfaces requires human cooperation. At this time, and despite the very collaborative R community, the level of effort to do such work is daunting. Moreover, there is a general lack of financial or other reward for such efforts. 
 
-During discussions at UseR!2017, it was clear that useRs are quite interested in unification of package. Younger workers expressed the opinion that there were egos and interest groups standing in the way of some such unifications, but the status of some of the players impeded the discussion of such possibilities.
+During discussions at useR!2017, it was clear that R users are quite interested in unification of packages. Younger participants expressed the opinion that there were egos and interest groups standing in the way of some such unifications, and the status of some of the players impeded the discussion of such possibilities.
 
 
 
@@ -149,7 +146,7 @@ During discussions at UseR!2017, it was clear that useRs are quite interested in
 
 Our work on these topics leads us to call for increased respect and value for the work done by local meetup group organizers and individuals who contribute to spreading R knowledge, both online and in their communities. Our survey and discussions show how impactful these community networks are; investing in community building is not something we need do only because of idealism, but because it is effective.
 
-We can also see the importance of continued commitment to growing the skills of package developers across the R ecosystem. Adopting best practices, including writing good documentation, makes this entire challenge better for everyone, from the CRAN Task View maintainer to the new R user.
+We can also see the importance of continued commitment to growing the skills of package developers across the R ecosystem. Adopting best practices, including understanding dependency management and writing good documentation, makes this entire challenge better for everyone, from the developer with downstream dependencies to the CRAN Task View maintainer to the new R user.
 
 JOHN AND SPENCER: For full details of _The R Journal_ style and information on how to prepare your article for submission, see the [Instructions for Authors](https://journal.r-project.org/share/author-guide.pdf).
 \bibliography{RJreferences}
