@@ -19,11 +19,13 @@ author:
     - 4550 Warwick Blvd. Apt. 508 
     - Kansas City, MO 64111 
     email:  spencer.graves@effectivedefense.org
-abstract: 
 
+## abstract: >
 
->
-  An abstract of less than 150 words.
+This article is an outgrowth of a plenary session on "Navigating the R Package Universe" at the useR!2017 conference in Brussels.  This session considered three different ways to make it easier for people to use R:  Making it easier for people to find what they want in the universe of contributed packages using (1) various search capabilities, (2) commentary, e.g., with CRAN Task Views, and (3) producing common interfaces to make it easier for users to compare alternative approaches to essentially the same problem.  
+
+  %  An abstract of less than 150 words.
+
 preamble: >
   % Any extra latex you need in the preamble
 tables: yes
@@ -57,7 +59,9 @@ You can include references in parentheses \citep{R}, or cite a reference such as
 
 ## Search
 
+There are a number of different search capabilities for R, summarized in the following table.  This table is an extract from a similar table in the Wikiversity artice on ["Searching R Packages"](https://en.wikiversity.org/wiki/Searching_R_Packages).  If you think this analysis could be improved in any way, you are invited to make whatever changes you want to that Wikiversity article. Of course, any change you make could be later changed by someone else. Wikiversity, like Wikipedia, works, because the Wikimedia culture pushes people to write from a neutral point of view citing credible sources and treat others with respect, settling difference through discussions on the associated "Discuss" or "Talk" page.    
 
+<insert some version of that table here> 
 
 ## Guidance
 
