@@ -14,3 +14,5 @@ are available in the wiki at https://github.com/nashjc/Rnavpkg/wiki and in the "
 https://github.com/nashjc/Rnavpkg. We welcome advance communications with interested use**R**s.
 
 John Nash (nashjc _at_ uottawa.ca), Julia Silge (julia.silge _at_ gmail.com), and Spencer Graves (spencer.graves _at_ prodsyse.com)
+
+Test update 180702
