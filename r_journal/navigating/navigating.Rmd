@@ -65,9 +65,15 @@ There are a number of different search capabilities for R, summarized in the fol
 ```{r}
 library(packagesurvey)
 data(package_survey)
+
+nrespondent <- n_distinct(package_survey$respondent)
 ```
 
-In preparation for this session, one author (Silge) ran a brief online survey in the spring of 2017 to ask R users how they currently discover and learn about R packages. The results of this survey are available in an R package \citep{packagesurvey} on GitHub. There were `r n_distinct(package_survey$respondent)` respondents to this survey, which had a single multiple select question on it, "How do you currently discover and learn about R packages?"
+In preparation for this session, one author (Silge) ran a brief online survey in the spring of 2017 to ask R users how 
+they currently discover and learn about R packages. The results of this survey are available in an R package 
+\citep{packagesurvey} on GitHub. There were `r n_distinct(package_survey$respondent)` 
+respondents to this survey, which had a single multiple select question on it, "How do you currently discover and learn 
+about R packages?"
 
 
 ```{r}

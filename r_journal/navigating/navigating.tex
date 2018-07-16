@@ -5,14 +5,16 @@
 \maketitle
 
 \abstract{%
-This article is an outgrowth of a plenary session on ``Navigating the R
-Package Universe'' at the useR!2017 conference in Brussels. This session
-considered three different ways to make it easier for people to use R:
-Making it easier for people to find what they want in the universe of
-contributed packages using (1) various search capabilities, (2)
-commentary, e.g., with CRAN Task Views, and (3) producing common
-interfaces to make it easier for users to compare alternative approaches
-to essentially the same problem.\\
+Today, the enormous number of contributed packages available to R users
+outstrips any given user's ability to understand how these packages
+work, their relative merits, or how they are related to each other. We
+organized a plenary session at useR!2017 in Brussels for the R community
+to think through these issues and ways forward. This session considered
+three key points of discussion. Users can navigate the universe of R
+packages with (1) capabilities for directly searching for R packages,
+(2) guidance for which packages to use, e.g., from CRAN Task Views and
+other sources, and (3) access to common interfaces for alternative
+approaches to essentially the same problem.\\
 }
 
 
@@ -169,8 +171,8 @@ Some participants wondered whether the idea of a
 \href{https://cran.r-project.org/web/views/}{CRAN Task View} is outdated
 in the current climate with so many packages, and whether it is even
 possible for one person to maintain one effectively. Others responded
-that CTVs are all about curation, which is still important, perhaps even
-more important now. We had at least one CTV maintainer present in our
+that CTVs are focused on curation, which is still important, perhaps
+even more so now. We had at least one CTV maintainer present in our
 breakout session, and several things were presented as important in
 order for CTV maintainers to do their jobs:
 
@@ -184,7 +186,7 @@ order for CTV maintainers to do their jobs:
 
 These are helpful for \emph{all} R users, of course, but also for
 maintainers of CRAN Task Views. The pkgdown \citep{pkgdown} package was
-mentioned as a great way to make documentation visible.
+mentioned as an effective option to make documentation visible.
 
 \hypertarget{cran-and-you}{%
 \subsubsection{\texorpdfstring{CRAN and
@@ -209,8 +211,8 @@ suggested that vignettes for context-specific tasks like the
 Workflows} would be helpful for package discovery and evaluation, either
 associated with CRAN or perhaps the \emph{R Journal}. Finally, there was
 some discussion about whether the very minimal gate-keeping on CRAN was
-good or bad for the community, although the general feeling was that
-efforts to keep packages off CRAN would not be positive.
+good or bad for the community, although the conclusion was that
+editorial efforts to keep packages off CRAN would not be positive.
 
 \hypertarget{more-data-more-problems}{%
 \subsubsection{More data, more problems}\label{more-data-more-problems}}
@@ -228,13 +230,13 @@ helpful in evaluating how important or helpful R packages are.
 Participants also discussed the possibility of a linter for analysis
 scripts, similar in concept to linters for code (such as \citet{lintr}),
 that would suggest packages and good practice. Such a linter would
-necessarily be opinionated, but almost all of the efforts to suggest and
-evaluate R packages are at some level.
+necessarily be opinionated, but almost all efforts to suggest and
+evaluate R packages are, by definition.
 
 \hypertarget{unification}{%
 \subsection{Unification}\label{unification}}
 
-\textbf{Unification}, as we have described it above, attempts to reduce
+\textbf{Unification}, as we have describe it here, attempts to reduce
 the package count and the span of knowledge required of users. When
 there are many ways to carry out the same calculation, there are
 inevitable differences of approach. However, in many respects it is the
@@ -242,24 +244,23 @@ inevitable differences of approach. However, in many respects it is the
 similar calling sequences, unless they are entirely compatible, lead to
 nasty experiences for users, and threaten the validity of results.
 
-From the experience of one of us (JN), the most satisfactory form of
+From the experience of one author (JN), the most satisfactory form of
 unification from the point of view of users is the use of wrapper
 functions that consolidate a number of similar tools into a single
-calling sequence. This has been the goal of package \textbf{optimx},
+calling sequence. This has been the goal of the package \textbf{optimx},
 which in its 2018 incarnation consolidates a number of R-internal and
 package-based function minimization tools. Moreover, the present version
 subsumes a number of other packages, thereby offering a reduction in the
-package count.
+effective package count.
 
 The downside of this is the amount of work for the developer. Worse, the
 very large package count has led to many \textbf{reverse dependencies}.
 At the time of writing, the new \texttt{optimx} fails checks of reverse
-dependencies, though apparently NOT because of anything new in the
+dependencies, though apparently not because of anything new in the
 package. The issues seem to relate to general tightening-up of checks
-for CRAN (Consolidated R Archive Network) policies, so that the
-dependent packages fail (or are not installable) \textbf{before} they
-even try functionality from \texttt{optimx}. Such issues will have to be
-resolved.
+for CRAN policies, so that the dependent packages fail (or are not
+installable) \textbf{before} they even try functionality from
+\texttt{optimx}. Such issues will have to be resolved.
 
 While a wrapper such as \texttt{optimx} can, with effort, be created,
 merging two existing but different packages that provide similar
@@ -268,10 +269,10 @@ cooperation. At this time, and despite the very collaborative R
 community, the level of effort to do such work is daunting. Moreover,
 there is a general lack of financial or other reward for such efforts.
 
-During discussions at UseR!2017, it was clear that useRs are quite
-interested in unification of package. Younger workers expressed the
-opinion that there were egos and interest groups standing in the way of
-some such unifications, but the status of some of the players impeded
+During discussions at useR!2017, it was clear that R users are quite
+interested in unification of packages. Younger participants expressed
+the opinion that there were egos and interest groups standing in the way
+of some such unifications, and the status of some of the players impeded
 the discussion of such possibilities.
 
 \hypertarget{summary}{%
@@ -286,9 +287,10 @@ we need do only because of idealism, but because it is effective.
 
 We can also see the importance of continued commitment to growing the
 skills of package developers across the R ecosystem. Adopting best
-practices, including writing good documentation, makes this entire
-challenge better for everyone, from the CRAN Task View maintainer to the
-new R user.
+practices, including understanding dependency management and writing
+good documentation, makes this entire challenge better for everyone,
+from the developer with downstream dependencies to the CRAN Task View
+maintainer to the new R user.
 
 JOHN AND SPENCER: For full details of \emph{The R Journal} style and
 information on how to prepare your article for submission, see the
@@ -296,6 +298,7 @@ information on how to prepare your article for submission, see the
 for Authors}.
 
 \bibliography{RJreferences}
+
 
 \address{%
 Julia Silge\\
