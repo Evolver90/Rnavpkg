@@ -33,18 +33,17 @@ months, and where we can go from here.
 Users need options to search R packages, perhaps the content of
 DESCRIPTION files, documentation files, or other components of R
 packages. One author (Graves) has worked on the issue of searching for R
-functions from within R itself in the sos package \citep{sos}, and other
-options have been built such as RDocumentation.org
+functions from within R itself in the \CRANpkg{sos} package \citep{sos},
+and other options have been built such as RDocumentation.org
 \citep{rdocumentation}.
 
 Guidance about what package to use for any given task is available from
 multiple resources for users. R users can turn to long-established
-resources like CRAN Task Views (reference?), or newer options under
-current development such as the packagemetrics package
-\citep{packagemetrics} or the CRANsearcher RStudio addin
-\citep{cransearcher}. One author (Silge) organized a survey before useR
-about how R users learn about R packages that informed our discussion
-and is summarized here.
+resources like CRAN Task Views \citep{ctvs}, or newer options under
+current development such as \pkg{packagemetrics} \citep{packagemetrics}
+or the \CRANpkg{CRANsearcher} RStudio addin \citep{cransearcher}. One
+author (Silge) organized a survey before useR about how R users learn
+about R packages that informed our discussion and is summarized here.
 
 By unification, we largely mean meta-packages or wrappers, packages that
 call other, related packages for a common set of tasks. With a unified
@@ -64,23 +63,54 @@ experienced, and hope to use our community's enthusiasm and ideas to
 move forward with steps that will improve the value of the R ecosystem
 to humanity.
 
-You can include references in parentheses \citep{R}, or cite a reference
-such as \citet{R} in the text.
-
 \hypertarget{search}{%
 \subsection{Search}\label{search}}
 
-There are a number of different search capabilities for R, summarized in
-the following table. This table is an extract from a similar table in
-the Wikiversity artice on
-\href{https://en.wikiversity.org/wiki/Searching_R_Packages}{``Searching
-R Packages''}. If you think this analysis could be improved in any way,
-you are invited to make whatever changes you want to that Wikiversity
-article. Of course, any change you make could be later changed by
-someone else. Wikiversity, like Wikipedia, works, because the Wikimedia
-culture pushes people to write from a neutral point of view citing
-credible sources and treat others with respect, settling difference
-through discussions on the associated ``Discuss'' or ``Talk'' page.
+There are a number of different search capabilities for R, with
+different characteristics and strengths. The ways to search for help
+using R have proliferated in much the same way that the number of
+packages has, with some of the same challenges. It is not clear to users
+what the best way to search is, and many if not most users are not even
+aware of the search capabilities that have been built.
+
+The R Project for Statistical Computing's website has had a site focused
+on ``Getting Help with R'' \citep{gettinghelp} from early in R's
+history. This official overview of various help facilities recognized by
+the R Core Team includes functions such as \code{help()}, \code{demo()},
+\code{apropos()}, \code{help.search()}, and vignettes. This search and
+help functionality, used from R itself, accesses only locally installed
+documentation. This site also currently points to resources such as the
+CRAN Task Views, FAQ pages, Stack Overflow, and R email lists.
+
+Other search capabilities have been developed by the R community over
+the years, focused on different types of searching. The site built by
+\citet{baron} is one of the longest running, and can also be accessed
+from R itself using the \texttt{RSiteSearch()} function in
+\CRANpkg{utils} \citep{utils} and the \CRANpkg{sos} package. The site of
+\citet{goodman} is another resource that has been available for over a
+decade, and searches not only documentation but also GitHub issues,
+social media, and more. The site of \citet{rdrrio} is a newer option
+that includes not only a way to search R documentation but also the
+ability to run R in the browser. Another full-featured and modern
+website for search is RDocumentation.org, which offers users the ability
+to contribute examples.
+
+Other options for search capability focus not on documentation or
+individual functions but on packages and package descriptions. The
+search capability at METACRAN \citep{metacran} and the RStudio addin
+\CRANpkg{CRANsearcher} allow users to search the descriptions and titles
+of packages to find tools that fit their analysis needs.
+
+This discussion of search options for R users is intended to be thorough
+but not entirely exhaustive, and to demonstrate the variety of resources
+available. An additional point to be considered is to what extent these
+options for search are open source, and what affect that could have,
+either positive or negative. For example, the source code for both
+METACRAN \citep{metacran} and \CRANpkg{CRANsearcher} is entirely open on
+GitHub while RDocumentation.org is maintained by DataCamp, a privately
+held company. The analysis in this section is summarized in a
+Wikiversity article \citep{wikiversity} and you are invited to
+contribute to it.
 
 \hypertarget{guidance}{%
 \subsection{Guidance}\label{guidance}}
@@ -88,9 +118,10 @@ through discussions on the associated ``Discuss'' or ``Talk'' page.
 In preparation for this session, one author (Silge) ran a brief online
 survey in the spring of 2017 to ask R users how they currently discover
 and learn about R packages. The results of this survey are available in
-an R package \citep{packagesurvey} on GitHub. There were 1039
-respondents to this survey, which had a single multiple select question
-on it, ``How do you currently discover and learn about R packages?''
+an R package \pkg{packagesurvey} \citep{packagesurvey} on GitHub. There
+were 1039 respondents to this survey, which had a single multiple select
+question on it, ``How do you currently discover and learn about R
+packages?''
 
 \begin{Schunk}
 \begin{table}
@@ -167,14 +198,13 @@ Taylor} and
 \hypertarget{cran-task-views}{%
 \subsubsection{CRAN Task Views}\label{cran-task-views}}
 
-Some participants wondered whether the idea of a
-\href{https://cran.r-project.org/web/views/}{CRAN Task View} is outdated
-in the current climate with so many packages, and whether it is even
-possible for one person to maintain one effectively. Others responded
-that CTVs are focused on curation, which is still important, perhaps
-even more so now. We had at least one CTV maintainer present in our
-breakout session, and several things were presented as important in
-order for CTV maintainers to do their jobs:
+Some participants wondered whether the idea of a CRAN Task View
+\citep{ctvs} is outdated in the current climate with so many packages,
+and whether it is even possible for one person to maintain one
+effectively. Others responded that CTVs are focused on curation, which
+\emph{is} still important, perhaps even more so now. We had at least one
+CTV maintainer present in our breakout session, and several things were
+presented as important in order for CTV maintainers to do their jobs:
 
 \begin{itemize}
 \tightlist
@@ -185,8 +215,9 @@ order for CTV maintainers to do their jobs:
 \end{itemize}
 
 These are helpful for \emph{all} R users, of course, but also for
-maintainers of CRAN Task Views. The pkgdown \citep{pkgdown} package was
-mentioned as an effective option to make documentation visible.
+maintainers of CRAN Task Views. The \CRANpkg{pkgdown} \citep{pkgdown}
+package was mentioned as an effective option to make documentation
+visible.
 
 \hypertarget{cran-and-you}{%
 \subsubsection{\texorpdfstring{CRAN and
@@ -200,9 +231,9 @@ authors have learned that there is support for some tagging architecture
 for packages on CRAN in the
 \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#The-DESCRIPTION-file}{DESCRIPTION
 file using ACM, JEL, or MSC classifications}. For an example of this in
-action, check out the lfe \citep{lfe} package. These are fairly unwieldy
-lists currently and something like an RStudio addin could be used to
-navigate them, if they were widely used.
+action, check out the \CRANpkg{lfe} \citep{lfe} package. These are
+fairly unwieldy lists currently and something like an RStudio addin
+could be used to navigate them, if they were widely used.
 
 Another desire participants voiced was for more information directly on
 CRAN, such as the number of downloads for packages. Participants also
@@ -247,22 +278,22 @@ nasty experiences for users, and threaten the validity of results.
 From the experience of one author (JN), the most satisfactory form of
 unification from the point of view of users is the use of wrapper
 functions that consolidate a number of similar tools into a single
-calling sequence. This has been the goal of the package \textbf{optimx},
-which in its 2018 incarnation consolidates a number of R-internal and
-package-based function minimization tools. Moreover, the present version
-subsumes a number of other packages, thereby offering a reduction in the
-effective package count.
+calling sequence. This has been the goal of the package
+\CRANpkg{optimx}, which in its 2018 incarnation consolidates a number of
+R-internal and package-based function minimization tools. Moreover, the
+present version subsumes a number of other packages, thereby offering a
+reduction in the effective package count.
 
 The downside of this is the amount of work for the developer. Worse, the
 very large package count has led to many \textbf{reverse dependencies}.
-At the time of writing, the new \texttt{optimx} fails checks of reverse
+At the time of writing, the new \CRANpkg{optimx} fails checks of reverse
 dependencies, though apparently not because of anything new in the
 package. The issues seem to relate to general tightening-up of checks
 for CRAN policies, so that the dependent packages fail (or are not
 installable) \textbf{before} they even try functionality from
-\texttt{optimx}. Such issues will have to be resolved.
+\CRANpkg{optimx}. Such issues will have to be resolved.
 
-While a wrapper such as \texttt{optimx} can, with effort, be created,
+While a wrapper such as \CRANpkg{optimx} can, with effort, be created,
 merging two existing but different packages that provide similar
 capability with very different user interfaces requires human
 cooperation. At this time, and despite the very collaborative R
