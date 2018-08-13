@@ -43,22 +43,25 @@ theme_set(theme_minimal())
 
 As of our writing, there are more than 12,000 packages on CRAN. R users must approach this abundance of packages with effective strategies to find what they need and choose which packages to invest time in learning how to use. At useR!2017 in Brussels, we organized a plenary session on this issue, with three themes: **search**, **guidance**, and **unification**. Here, we summarize these important themes, the discussion in our community both at useR!2017 and in the intervening months, and where we can go from here.
 
-Users need options to search R packages, perhaps the content of DESCRIPTION files, documentation files, or other components of R packages. One author (Graves) has worked on the issue of searching for R functions from within R itself in the sos package \citep{sos}, and other options have been built such as RDocumentation.org \citep{rdocumentation}.
+Users need options to search R packages, perhaps the content of DESCRIPTION files, documentation files, or other components of R packages. One author (Graves) has worked on the issue of searching for R functions from within R itself in the \CRANpkg{sos} package \citep{sos}, and other options have been built such as RDocumentation.org \citep{rdocumentation}.
 
-Guidance about what package to use for any given task is available from multiple resources for users. R users can turn to long-established resources like CRAN Task Views (reference?), or newer options under current development such as the packagemetrics package \citep{packagemetrics} or the CRANsearcher RStudio addin \citep{cransearcher}. One author (Silge) organized a survey before useR about how R users learn about R packages that informed our discussion and is summarized here.
+Guidance about what package to use for any given task is available from multiple resources for users. R users can turn to long-established resources like CRAN Task Views \citep{ctvs}, or newer options under current development such as \pkg{packagemetrics} \citep{packagemetrics} or the \CRANpkg{CRANsearcher} RStudio addin \citep{cransearcher}. One author (Silge) organized a survey before useR about how R users learn about R packages that informed our discussion and is summarized here.
 
 By unification, we largely mean meta-packages or wrappers, packages that call other, related packages for a common set of tasks. With a unified wrapper package, a user only has to learn one API but then can use many different implementations for a certain task. One author (Nash) has been particularly involved in numerical optimization techniques and presented possibilities there and beyond. More generally, as revealed during breakout discussions at useR!2017 and beyond, there are opportunities to merge either packages or their functionality. Such ideas require human cooperation and some give and take in a realm where egos can take precedence over ease of use.
 
 After our main presentation at useR!2017, we broke out into three smaller sessions focused on these three themes. We are encouraged by the engaged attendance and vigorous participation from the community we experienced, and hope to use our community's enthusiasm and ideas to move forward with steps that will improve the value of the R ecosystem to humanity.  
 
-
-You can include references in parentheses \citep{R}, or cite a reference such as \citet{R} in the text.
-
 ## Search
 
-There are a number of different search capabilities for R, summarized in the following table.  This table is an extract from a similar table in the Wikiversity artice on ["Searching R Packages"](https://en.wikiversity.org/wiki/Searching_R_Packages).  If you think this analysis could be improved in any way, you are invited to make whatever changes you want to that Wikiversity article. Of course, any change you make could be later changed by someone else. Wikiversity, like Wikipedia, works, because the Wikimedia culture pushes people to write from a neutral point of view citing credible sources and treat others with respect, settling difference through discussions on the associated "Discuss" or "Talk" page.    
+There are a number of different search capabilities for R, with different characteristics and strengths. The ways to search for help using R have proliferated in much the same way that the number of packages has, with some of the same challenges. It is not clear to users what the best way to search is, and many if not most users are not even aware of the search capabilities that have been built. 
 
-<insert some version of that table here> 
+The R Project for Statistical Computing's website has had a site focused on "Getting Help with R" \citep{gettinghelp} from early in R's history. This official overview of various help facilities recognized by the R Core Team includes functions such as \code{help()}, \code{demo()}, \code{apropos()}, \code{help.search()}, and vignettes. This search and help functionality, used from R itself, accesses only locally installed documentation. This site also currently points to resources such as the CRAN Task Views, FAQ pages, Stack Overflow, and R email lists.
+
+Other search capabilities have been developed by the R community over the years, focused on different types of searching. The site built by \citet{baron} is one of the longest running, and can also be accessed from R itself using the `RSiteSearch()` function in \CRANpkg{utils} \citep{utils} and the \CRANpkg{sos} package. The site of \citet{goodman} is another resource that has been available for over a decade, and searches not only documentation but also GitHub issues, social media, and more. The site of \citet{rdrrio} is a newer option that includes not only a way to search R documentation but also the ability to run R in the browser. Another full-featured and modern website for search is RDocumentation.org, which offers users the ability to contribute examples.
+
+Other options for search capability focus not on documentation or individual functions but on packages and package descriptions. The search capability at METACRAN \citep{metacran} and the RStudio addin \CRANpkg{CRANsearcher} allow users to search the descriptions and titles of packages to find tools that fit their analysis needs. 
+
+This discussion of search options for R users is intended to be thorough but not entirely exhaustive, and to demonstrate the variety of resources available. An additional point to be considered is to what extent these options for search are open source, and what affect that could have, either positive or negative. For example, the source code for both METACRAN \citep{metacran} and \CRANpkg{CRANsearcher} is entirely open on GitHub while RDocumentation.org is maintained by DataCamp, a privately held company. The analysis in this section is summarized in a Wikiversity article \citep{wikiversity} and you are invited to contribute to it.
 
 ## Guidance
 
@@ -70,7 +73,7 @@ nrespondent <- n_distinct(package_survey$respondent)
 ```
 
 In preparation for this session, one author (Silge) ran a brief online survey in the spring of 2017 to ask R users how 
-they currently discover and learn about R packages. The results of this survey are available in an R package 
+they currently discover and learn about R packages. The results of this survey are available in an R package \pkg{packagesurvey}
 \citep{packagesurvey} on GitHub. There were `r n_distinct(package_survey$respondent)` 
 respondents to this survey, which had a single multiple select question on it, "How do you currently discover and learn 
 about R packages?"
@@ -94,7 +97,7 @@ package_survey %>%
 
 Responses to this survey were fielded from R email help lists, local R meetup groups, social media such as Twitter, and affinity groups such as R-Ladies. Figure 1 shows when users responded to the survey. The respondents to this survey overwhelmingly look to social media including blogs and Twitter to learn about R packages, and also make use of general search sites and their personal network.
 
-There were helpful, insightful answers from people contributing to the "other" option. R users use [Stack Overflow](https://stackoverflow.com/questions/tagged/r) to learn about R packages, as well as options like [CRANberries](http://dirk.eddelbuettel.com/cranberries/) and [crantastic](http://www.crantastic.org/), both of which have RSS feeds that users follow. Other users mentioned learning by reading code on GitHub, and other search websites including [rpackages.io](http://rpackages.io/).
+There were helpful, insightful answers from people contributing to the "other" option. R users use Stack Overflow to learn about R packages, as well as options like CRANberries \citep{cranberries} and [crantastic](http://www.crantastic.org/), both of which have RSS feeds that users follow. Other users mentioned learning by reading code on GitHub, and other search websites including [rpackages.io](http://rpackages.io/).
 
 
 ```{r survey_time, fig.width=5, fig.height=3, fig.cap="Responses to survey on package discovery during the spring of 2017"}
@@ -116,16 +119,16 @@ Participants in this session emphasized how impactful personal relationships can
 
 ### CRAN Task Views
 
-Some participants wondered whether the idea of a [CRAN Task View](https://cran.r-project.org/web/views/) is outdated in the current climate with so many packages, and whether it is even possible for one person to maintain one effectively. Others responded that CTVs are focused on curation, which is still important, perhaps even more so now. We had at least one CTV maintainer present in our breakout session, and several things were presented as important in order for CTV maintainers to do their jobs:
+Some participants wondered whether the idea of a CRAN Task View \citep{ctvs} is outdated in the current climate with so many packages, and whether it is even possible for one person to maintain one effectively. Others responded that CTVs are focused on curation, which *is* still important, perhaps even more so now. We had at least one CTV maintainer present in our breakout session, and several things were presented as important in order for CTV maintainers to do their jobs:
 
 - Package maintainers should update their `NEWS` files.
 - Package maintainers need to write good documentation.
 
-These are helpful for *all* R users, of course, but also for maintainers of CRAN Task Views. The pkgdown \citep{pkgdown} package was mentioned as an effective option to make documentation visible.
+These are helpful for *all* R users, of course, but also for maintainers of CRAN Task Views. The \CRANpkg{pkgdown} \citep{pkgdown} package was mentioned as an effective option to make documentation visible.
 
 ### CRAN and *you*
 
-Participants had several ideas about how things are done on CRAN now and adjustments that might be made in the interest of discovering and evaluating packages. One idea that came up several times was the possibility of keywords or tagging for packages. Since useR!2017, the authors have learned that there is support for some tagging architecture for packages on CRAN in the [DESCRIPTION file using ACM, JEL, or MSC classifications](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file). For an example of this in action, check out the lfe \citep{lfe} package. These are fairly unwieldy lists currently and something like an RStudio addin could be used to navigate them, if they were widely used.
+Participants had several ideas about how things are done on CRAN now and adjustments that might be made in the interest of discovering and evaluating packages. One idea that came up several times was the possibility of keywords or tagging for packages. Since useR!2017, the authors have learned that there is support for some tagging architecture for packages on CRAN in the [DESCRIPTION file using ACM, JEL, or MSC classifications](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file). For an example of this in action, check out the \CRANpkg{lfe} \citep{lfe} package. These are fairly unwieldy lists currently and something like an RStudio addin could be used to navigate them, if they were widely used.
 
 Another desire participants voiced was for more information directly on CRAN, such as the number of downloads for packages. Participants also suggested that vignettes for context-specific tasks like the [Bioconductor Workflows](https://www.bioconductor.org/help/workflows/) would be helpful for package discovery and evaluation, either associated with CRAN or perhaps the *R Journal*. Finally, there was some discussion about whether the very minimal gate-keeping on CRAN was good or bad for the community, although the conclusion was that editorial efforts to keep packages off CRAN would not be positive.
 
@@ -137,11 +140,11 @@ Some of the package developers at the session wondered why, when R is a data-cen
 
 **Unification**, as we have describe it here, attempts to reduce the package count and the span of knowledge required of users. When there are many ways to carry out the same calculation, there are inevitable differences of approach. However, in many respects it is the **similarity** of approaches that causes most confusion. Very similar calling sequences, unless they are entirely compatible, lead to nasty experiences for users, and threaten the validity of results.
 
-From the experience of one author (JN), the most satisfactory form of unification from the point of view of users is the use of wrapper functions that consolidate a number of similar tools into a single calling sequence. This has been the goal of the package **optimx**, which in its 2018 incarnation consolidates a number of R-internal and package-based function minimization tools. Moreover, the present version subsumes a number of other packages, thereby offering a reduction in the effective package count.
+From the experience of one author (JN), the most satisfactory form of unification from the point of view of users is the use of wrapper functions that consolidate a number of similar tools into a single calling sequence. This has been the goal of the package \CRANpkg{optimx}, which in its 2018 incarnation consolidates a number of R-internal and package-based function minimization tools. Moreover, the present version subsumes a number of other packages, thereby offering a reduction in the effective package count.
 
-The downside of this is the amount of work for the developer. Worse, the very large package count has led to many **reverse dependencies**. At the time of writing, the new `optimx` fails checks of reverse dependencies, though apparently not because of anything new in the package. The issues seem to relate to general tightening-up of checks for CRAN policies, so that the dependent packages fail (or are not installable) **before** they even try functionality from `optimx`. Such issues will have to be resolved.
+The downside of this is the amount of work for the developer. Worse, the very large package count has led to many **reverse dependencies**. At the time of writing, the new \CRANpkg{optimx} fails checks of reverse dependencies, though apparently not because of anything new in the package. The issues seem to relate to general tightening-up of checks for CRAN policies, so that the dependent packages fail (or are not installable) **before** they even try functionality from \CRANpkg{optimx}. Such issues will have to be resolved.
 
-While a wrapper such as `optimx` can, with effort, be created, merging two existing but different packages that provide similar capability with very different user interfaces requires human cooperation. At this time, and despite the very collaborative R community, the level of effort to do such work is daunting. Moreover, there is a general lack of financial or other reward for such efforts. 
+While a wrapper such as \CRANpkg{optimx} can, with effort, be created, merging two existing but different packages that provide similar capability with very different user interfaces requires human cooperation. At this time, and despite the very collaborative R community, the level of effort to do such work is daunting. Moreover, there is a general lack of financial or other reward for such efforts. 
 
 During discussions at useR!2017, it was clear that R users are quite interested in unification of packages. Younger participants expressed the opinion that there were egos and interest groups standing in the way of some such unifications, and the status of some of the players impeded the discussion of such possibilities.
 
@@ -155,4 +158,5 @@ Our work on these topics leads us to call for increased respect and value for th
 We can also see the importance of continued commitment to growing the skills of package developers across the R ecosystem. Adopting best practices, including understanding dependency management and writing good documentation, makes this entire challenge better for everyone, from the developer with downstream dependencies to the CRAN Task View maintainer to the new R user.
 
 JOHN AND SPENCER: For full details of _The R Journal_ style and information on how to prepare your article for submission, see the [Instructions for Authors](https://journal.r-project.org/share/author-guide.pdf).
+
 \bibliography{RJreferences}

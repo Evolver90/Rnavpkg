@@ -32,7 +32,7 @@ Julia explored resources that exist to guide users to packages for certains task
 
 ## Search
 
-Spencer has worked on the issue of searching for R functions in his [sos](https://cran.r-project.org/package=sos) package, and led the last section focused specifically on how users can find what they are looking for. Ludovic spoke during this part of our talk about [RDocumentation](https://www.rdocumentation.org/), how it works, how it was built, and how we as a community can use it and contribute to making it more useful.
+Spencer has worked on the issue of searching for R functions in his [sos](https://cran.r-project.org/package=sos) package, and led the last section focused specifically on how users can find what they are looking for. [Ludovic](https://github.com/ludov04) spoke during this part of our talk about [RDocumentation](https://www.rdocumentation.org/), how it works, how it was built, and how we as a community can use it and contribute to making it more useful.
 
 After the main presentation, we broke out into three smaller sessions focused on these topics for discussion and brainstorming. Both the main session and then our three following breakout sessions were well-attended. We are so happy about the participation from the community we saw, and hope to use people's enthusiasm and ideas to move forward with some steps that will improve parts of the R ecosystem. In the coming weeks, look for three more blog posts on these three topics with more details and ideas on projects. Perhaps something will resonate with *you* and you can get involved!
 
