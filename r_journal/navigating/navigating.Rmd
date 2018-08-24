@@ -64,10 +64,11 @@ The [rseek](https://rseek.org) site of \citet{goodman} is another resource that 
 
 Other options for search capability focus not on documentation or individual functions but on packages and package descriptions. The search capability at METACRAN \citep{metacran} and the RStudio addin \CRANpkg{CRANsearcher} allow users to search the descriptions and titles of packages to find tools that fit their analysis needs. (The \code{sos} package sorts packages based on cumulative search scores from help pages within packages.)
 
-This discussion of search options for R users is intended to be thorough but not entirely exhaustive, and to demonstrate the variety of resources available. An additional point to be considered is to what extent these options for search are open source, and what affect that could have, either positive or negative. For example, the source code for both METACRAN \citep{metacran} and \CRANpkg{CRANsearcher} is entirely open on GitHub while RDocumentation.org is maintained by DataCamp, a privately held company. The analysis in this section is summarized in a Wikiversity article \citep{wikiversity}, and you are invited to contribute to it.
+This discussion of search options for R users is intended to be thorough but not entirely exhaustive, and to demonstrate the variety of resources available. An additional point to be considered is to what extent these options for search are open source, and what affect that could have, either positive or negative. For example, the source code for both METACRAN \citep{metacran} and \CRANpkg{CRANsearcher} is entirely open on GitHub while RDocumentation.org is maintained by DataCamp, a privately held company. The analysis in this section is summarized in a Wikiversity article \citep{wikiversity};  it's on Wikiversity so anyone can contribute to it.
 
+<!-- 
 In the "Search" breakout session, some users commented that user reviews are useful.  Those are included in the [crantastic](http://www.crantastic.org/) and \CRANpkg{CRANsearcher} capabilities.  This discussion led to the development of a "Draft Proposal for improving the ability of R users to search R packages", which so far is only an idea waiting for volunteers or funding;  it's available on Wikiversity, where anyone can contribute to moving it closer to realization \citep{draftProposal}.  
-
+-->
 
 ## Guidance
 
