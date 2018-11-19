@@ -21,11 +21,11 @@ approaches to essentially the same problem.\\
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-As of our writing, there are almost 13,000 packages on CRAN. R users
-must approach this abundance of packages with effective strategies to
-find what they need and choose which packages to invest time in learning
-how to use. At \href{https://user2017.brussels/}{useR!2017 in Brussels},
-we organized a plenary session on this issue, with three themes:
+As of our writing, there are over 13,000 packages on CRAN. R users must
+approach this abundance of packages with effective strategies to find
+what they need and choose which packages to invest time in learning how
+to use. At \href{https://user2017.brussels/}{useR!2017 in Brussels}, we
+organized a plenary session on this issue, with three themes:
 \textbf{search}, \textbf{guidance}, and \textbf{unification}. Here, we
 summarize these important themes, the discussion in our community both
 at useR!2017 and in the intervening months, and where we can go from
@@ -119,10 +119,13 @@ that fit their analysis needs.
 
 This discussion of search options for R users is intended to be thorough
 but not entirely exhaustive, and to demonstrate the variety of resources
-available. An additional point to be considered is to what extent these
-options for search are open source, and what affect that could have,
-either positive or negative. For example, the source code for both
-METACRAN and \CRANpkg{CRANsearcher} is entirely open on GitHub while
+available. Many search sites are not clear how to use their search
+capabilities (single words vs.~structured queries), and the algorithms
+used for ranking results give disparate results. An additional point to
+be considered is to what extent these options for search are open
+source, and what affect that could have, either positive or negative.
+For example, the source code for both METACRAN and
+\CRANpkg{CRANsearcher} is entirely open on GitHub while
 RDocumentation.org is maintained by DataCamp, a privately held company.
 
 The analysis in this section is summarized in a
@@ -137,6 +140,9 @@ resources, are useful alongside search. The discussion overall led to
 the development of a draft proposal for improving the ability of R users
 to search R packages, which is available on Wikiversity; anyone can
 contribute to moving it closer to realization \citep{draftProposal}.
+Overall, perhaps it is time for the R Project for Statistical
+Computing's \href{https://www.r-project.org/search.html}{``Search''}
+\citep{search} page to include more updated options.
 
 \hypertarget{guidance}{%
 \section{Guidance}\label{guidance}}
@@ -188,7 +194,9 @@ as well as options like
 \href{http://dirk.eddelbuettel.com/cranberries/}{CRANberries}
 \citep{cranberries} and \href{http://www.crantastic.org/}{crantastic},
 both of which have RSS feeds that users follow. Other users mentioned
-learning by reading code on GitHub, and other search websites including
+learning by reading code on GitHub, the R Special Interest Group mailing
+lists \citep{mailinglists} such as \texttt{r-sig-mixed-models} and
+\texttt{r-sig-geo}, and other search websites including
 \href{http://rpackages.io/}{rpackages.io}.
 
 \begin{figure}
@@ -217,7 +225,9 @@ to share this experience more broadly would be online video series or
 live data analysis, such as those by
 \href{https://www.facebook.com/seanjtaylor/videos/10103088186201897/}{Sean
 Taylor} \citep{taylor} and \href{https://youtu.be/jWePleDwmQo}{Roger
-Peng} \citep{peng}.
+Peng} \citep{peng}. Learning through personal networks does not
+invalidate the importance of other tools like search, especially when it
+comes to more specialized tasks.
 
 \hypertarget{cran-task-views}{%
 \subsection{CRAN Task Views}\label{cran-task-views}}
@@ -225,8 +235,10 @@ Peng} \citep{peng}.
 Some participants wondered whether the idea of a CRAN Task View
 \citep{ctvs} is outdated in the current climate with so many packages,
 and whether it is even possible for one person to maintain one
-effectively. Others responded that CTVs are focused on curation, which
-\emph{is} still important, perhaps even more so now. We had at least one
+effectively. In fact, several participants voiced frustration with CTVs
+that have focused on older packages alone. Others responded that CTVs
+are focused on curation, which \emph{is} still important, perhaps even
+more so now in a world with over 13,000 packages. We had at least one
 CTV maintainer present in our breakout session, and several things were
 presented as important in order for CTV maintainers to do their jobs:
 
@@ -265,10 +277,11 @@ suggested that vignettes for context-specific tasks like the
 \href{https://www.bioconductor.org/packages/release/workflows/}{Bioconductor
 Workflows} \citep{bioc} would be helpful for package discovery and
 evaluation, either associated with CRAN or perhaps the \emph{R Journal}.
-Finally, there was some discussion about whether the very minimal
-gate-keeping on CRAN was good or bad for the community, although the
-conclusion was that editorial efforts to keep packages off CRAN would
-not be positive.
+Finally, there was some discussion about whether gate-keeping on CRAN,
+perceived by most to be reasonable and minimal currently, is good or bad
+for the community. The conclusion in our discussion was that increased
+editorial efforts to keep packages off CRAN would not be positive for
+our community.
 
 \hypertarget{more-data-more-problems}{%
 \subsection{More data, more problems}\label{more-data-more-problems}}
@@ -285,9 +298,10 @@ present thought that data on package use (instead of package downloads
 alone) would be helpful in evaluating how important or helpful R
 packages are. Participants also discussed the possibility of a linter
 for analysis scripts, similar in concept to linters for code (such as
-\citet{lintr}), that would suggest packages and good practice. Such a
-linter would necessarily be opinionated, but almost all efforts to
-suggest and evaluate R packages are, by definition.
+\citet{lintr}) that automatically analyze code for potential problems
+and errors, that would suggest packages and good practice. Such a linter
+would necessarily be opinionated, but almost all efforts to suggest and
+evaluate R packages are, by definition.
 
 \hypertarget{unification}{%
 \section{Unification}\label{unification}}
@@ -326,7 +340,7 @@ there is a general lack of financial or other reward for such efforts.
 
 During discussions at useR!2017, it was clear that R users are quite
 interested in unification of packages. Younger participants expressed
-the opinion that there were egos and interest groups standing in the way
+the opinion that there are egos and interest groups standing in the way
 of some such unifications, and the status of some of the players impeded
 the discussion of such possibilities.
 
