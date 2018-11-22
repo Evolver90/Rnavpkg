@@ -126,7 +126,7 @@ Some participants wondered whether the idea of a CRAN Task View \citep{ctvs} is 
 - Package maintainers should update their `NEWS` files.
 - Package maintainers need to write good documentation.
 
-These are helpful for *all* R users, of course, but also for maintainers of CRAN Task Views. The \CRANpkg{pkgdown} \citep{pkgdown} package was mentioned as an effective option to make documentation visible.
+These are helpful for *all* R users, of course, but also for maintainers of CRAN Task Views. The \CRANpkg{pkgdown} \citep{pkgdown} package was mentioned as an effective option for making documentation more visible.
 
 ## CRAN and *you*
 
@@ -157,7 +157,7 @@ During discussions at useR!2017, it was clear that R users are quite interested 
 
 Our exploration of these topics leads us to call for increased respect and value for the work done by local meetup group organizers and individuals who contribute to spreading R knowledge, both online and in their communities. Our survey and discussions show how impactful these community networks are; investing in community building is not something we need do only because of idealism, but because it is effective.
 
-We also see the importance of continued commitment to growing the skills of package developers across the R ecosystem. Adopting best practices, including understanding dependency management and writing good documentation, makes this entire challenge better for everyone, from the developer with downstream dependencies to the CRAN Task View maintainer to the new R user.
+We also identify the importance of growing the skills of package developers across the R ecosystem, in dependency management, documentation, and beyond. Wider adoption of best practices makes the R package universe easier for everyone to navigate, from the developer with downstream dependencies to the CRAN Task View maintainer to the new R user.
 
 <!-- JOHN AND SPENCER: For full details of _The R Journal_ style and information on how to prepare your article for submission, see the [Instructions for Authors](https://journal.r-project.org/share/author-guide.pdf). -->
 
